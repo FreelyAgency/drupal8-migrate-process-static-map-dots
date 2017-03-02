@@ -1,0 +1,19 @@
+# ...
+# ...
+# ...
+process:
+  field_freely_field:
+    plugin: iterator
+    source: field_freely_field
+    process:
+      value:
+        plugin: static_map_dots
+        source:
+          - value
+        map:
+          'zakázky malého rozsahu (§12, odst<-!dot!-> 3)': small
+          'podlimitní zakázky (§12, odst<-!dot!-> 2)': under
+          'nadlimitní zakázky (§12, odst<-!dot!-> 1)': above
+# ...
+# ...
+# ...
